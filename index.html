@@ -33,17 +33,22 @@
 </head>
 
 <body>
-  <div id="demo">
-    <h1>ddd-card-list</h1>
-    <!-- this is going to do whatever the tag's defaults are -->
-    <h2>Default</h2>
-    <ddd-card-list></ddd-card-list>
-    <h2>Slot usage</h2>
-    <ddd-card-list data-accent="2" data-primary="17"><div>Sample slot content</div></ddd-card-list>
-    <h2>Property usage</h2>
-    <ddd-card-list id="example" title="Sample property title"></ddd-card-list>
-  </div>
+
   <script type="module" src="./ddd-card-list.js"></script>
+
+  <ddd-card-list ddd-primary="10"  ddd-accent="2">
+    <ddd-card title="Shenango" label="whatever" link="whatever.com" image= "https://shenango.psu.edu/sites/shenango/files/shenangohero16x9-ff.jpg">
+
+      <p>Other text</p>
+
+    </ddd-card>
+    <ddd-card title="Shenango" label="whatever" link="whatever.com">
+      <p>Other text</p>
+    </ddd-card>
+    <ddd-card title="Shenango" label="whatever" link="whatever.com">
+      <p>Other text</p>
+    </ddd-card>
+  </ddd-card-list>
 
   <!-- Take HAX, the Web and you further down the rabbit hole -->
   <style>
@@ -81,10 +86,6 @@
       color: yellow;
     }
   </style>
-  <details id="follow-the-white-rabbit" open>
-    <summary>How to Develop</summary>
-    <div class="content">
-    </div>
-  </details>
+
 </body>
 </html>

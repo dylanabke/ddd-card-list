@@ -5,7 +5,7 @@
 import { LitElement, html, css } from "lit";
 import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
 import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
-
+import {DDD } from "@haxtheweb/d-d-d/d-d-d.js";
 
 /**
  * `ddd-card`
@@ -13,7 +13,7 @@ import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
  * @demo index.html
  * @element ddd-card
  */
-export class DddCard extends DDDSuper(I18NMixin(LitElement)) {
+export class DddCard extends DDD {
 
   static get tag() {
     return "ddd-card";
@@ -22,6 +22,7 @@ export class DddCard extends DDDSuper(I18NMixin(LitElement)) {
   constructor() {
     super();
     this.title = "";
+    this.image = "";
     this.t = this.t || {};
     this.t = {
       ...this.t,
@@ -41,6 +42,8 @@ export class DddCard extends DDDSuper(I18NMixin(LitElement)) {
     return {
       ...super.properties,
       title: { type: String },
+      image: { type: String },
+      link: { type: String },
     };
   }
 
@@ -61,6 +64,23 @@ export class DddCard extends DDDSuper(I18NMixin(LitElement)) {
       h3 span {
         font-size: var(--ddd-card-label-font-size, var(--ddd-font-size-s));
       }
+      div {
+        display: inline-block;
+        background-color: var(--ddd-theme-primary);
+        border: 2px solid var(--ddd-theme-accent);
+        padding: var(--ddd-spacing-2);
+        margin: var(--ddd-spacing-2);
+        width: 100px;
+        height: 400px;
+        vertical-align: top;
+      }
+      img {
+        display: block;
+        width: 400px;
+        height: 200px;
+        justify-content: center;
+        align-items: center;
+      }
     `];
   }
 
@@ -69,17 +89,12 @@ export class DddCard extends DDDSuper(I18NMixin(LitElement)) {
     return html`
 <div class="wrapper">
   <h3><span>${this.t.title}:</span> ${this.title}</h3>
+  <img src="${this.image}" alt ="${this.title}"/>
   <slot></slot>
 </div>`;
   }
 
-  /**
-   * haxProperties integration via file reference
-   */
-  static get haxProperties() {
-    return new URL(`./lib/${this.tag}.haxProperties.json`, import.meta.url)
-      .href;
-  }
+
 }
 
-globalThis.customElements.define(DddCardList.tag, DddCardList);
+globalThis.customElements.define(DddCard.tag, DddCard);
