@@ -2,10 +2,8 @@
  * Copyright 2025 dylanabke
  * @license Apache-2.0, see LICENSE for full text.
  */
-import { LitElement, html, css } from "lit";
-import { DDDSuper } from "@haxtheweb/d-d-d/d-d-d.js";
-import { I18NMixin } from "@haxtheweb/i18n-manager/lib/I18NMixin.js";
-import {DDD } from "@haxtheweb/d-d-d/d-d-d.js";
+import { html, css } from "lit";
+import { DDD } from "@haxtheweb/d-d-d/d-d-d.js";
 
 /**
  * `ddd-card`
@@ -21,20 +19,9 @@ export class DddCard extends DDD {
 
   constructor() {
     super();
-    this.title = "";
-    this.image = "";
-    this.t = this.t || {};
-    this.t = {
-      ...this.t,
-      title: "Title",
-    };
-    this.registerLocalization({
-      context: this,
-      localesPath:
-        new URL("./locales/ddd-card.ar.json", import.meta.url).href +
-        "/../",
-      locales: ["ar", "es", "hi", "zh"],
-    });
+    this.title = null;
+    this.image = null;
+    this.link = null;
   }
 
   // Lit reactive properties
@@ -88,12 +75,11 @@ export class DddCard extends DDD {
   render() {
     return html`
 <div class="wrapper">
-  <h3><span>${this.t.title}:</span> ${this.title}</h3>
-  <img src="${this.image}" alt ="${this.title}"/>
+  <h3>${this.title}</h3>
+  <img src="${this.image}" alt="${this.title}"/>
   <slot></slot>
 </div>`;
   }
-
 
 }
 
