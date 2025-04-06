@@ -16,9 +16,7 @@
       margin: var(--ddd-spacing-2);
     }
     ddd-card-list {
-      margin: var(--ddd-spacing-2);
-      border: var(--ddd-border-md);
-      border-radius: var(--ddd-radius-lg);
+      display: inline-block;
     }
     ddd-card-list:hover {
       box-shadow: var(--ddd-boxShadow-sm);
@@ -34,58 +32,23 @@
 
 <body>
 
+  <div id="demo">
+    <h1>ddd-card-list</h1>
+    <ddd-card-list>
+      <ddd-card title="Shenango" label="whatever" link="whatever.com" image= "https://shenango.psu.edu/sites/shenango/files/shenangohero16x9-ff.jpg">
+        <p>Other text</p>
+      </ddd-card>
+      <ddd-card title="Shenango" label="whatever" link="whatever.com">
+        <p>Other text</p>
+      </ddd-card>
+      <ddd-card title="Shenango" label="whatever" link="whatever.com">
+        <p>Other text</p>
+      </ddd-card>
+    </ddd-card-list>
+  </div>
+
   <script type="module" src="./ddd-card-list.js"></script>
-
-  <ddd-card-list ddd-primary="10"  ddd-accent="2">
-    <ddd-card title="Shenango" label="whatever" link="whatever.com" image= "https://shenango.psu.edu/sites/shenango/files/shenangohero16x9-ff.jpg">
-
-      <p>Other text</p>
-
-    </ddd-card>
-    <ddd-card title="Shenango" label="whatever" link="whatever.com">
-      <p>Other text</p>
-    </ddd-card>
-    <ddd-card title="Shenango" label="whatever" link="whatever.com">
-      <p>Other text</p>
-    </ddd-card>
-  </ddd-card-list>
-
-  <!-- Take HAX, the Web and you further down the rabbit hole -->
-  <style>
-    #follow-the-white-rabbit {
-      margin: var(--ddd-spacing-4) auto 64px  16px;
-      background-color: var(--ddd-accent-4);
-      color: black;
-    }
-    #follow-the-white-rabbit[open] summary {
-      background-color: var(--ddd-accent-4) !important;
-      color: black;
-    }
-    #follow-the-white-rabbit[open] .content {
-      padding: 0 var(--ddd-spacing-4);
-    }
-    #follow-the-white-rabbit ul,
-    #follow-the-white-rabbit li {
-      padding: 0;
-      margin: 0;
-    }
-    #follow-the-white-rabbit li {
-      font-size: var(--ddd-font-size-xs);
-      list-style: none;
-    }
-    #follow-the-white-rabbit li strong,
-    #follow-the-white-rabbit li a {
-      padding: var(--ddd-spacing-2) var(--ddd-spacing-4);
-      color: black;
-      display: block;
-      font-weight: bold;
-    }
-    #follow-the-white-rabbit li:focus-within a,
-    #follow-the-white-rabbit li:hover a {
-      background-color: black;
-      color: yellow;
-    }
-  </style>
+  <script type="module" src="./ddd-card.js"></script>
 
 </body>
 </html>
