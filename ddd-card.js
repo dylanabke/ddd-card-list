@@ -82,7 +82,6 @@ export class DddCard extends DDDSuper(I18NMixin(LitElement)) {
         width: 100%;
         height: 200px;
         overflow: hidden;
-        border-radius: var(--ddd-radius-lg);
       }
       .card-image img {
         width: 100%;
@@ -91,12 +90,12 @@ export class DddCard extends DDDSuper(I18NMixin(LitElement)) {
       }
 
       card-title {
-        padding: var(--ddd-spacing-2);
+        padding: var(--ddd-spacing-4);
         font-size: var(--ddd-font-size-4);
         color: var(--ddd-theme-primary);
       }
       card-text {
-        padding: var(--ddd-spacing-2);
+        padding: var(--ddd-spacing-4);
         font-size: var(--ddd-font-size-3);
         color: var(--ddd-theme-primary);
       }

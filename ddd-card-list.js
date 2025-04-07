@@ -51,12 +51,13 @@ export class DddCardList extends DDDSuper(I18NMixin(LitElement)) {
       :host {
         display: block;
         color: var(--ddd-theme-primary);
-        background-color: var(--ddd-theme-accent);
+        background-color: var(--ddd-theme-default-slateMaxLight);
         font-family: var(--ddd-font-navigation);
       }
       .wrapper {
         margin: var(--ddd-spacing-2);
         padding: var(--ddd-spacing-4);
+        background-color: var(--ddd-theme-default-slateMaxLight);
       }
 
     `];
