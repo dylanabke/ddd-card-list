@@ -71,6 +71,13 @@ export class DddCard extends DDDSuper(I18NMixin(LitElement)) {
         justify-content: space-between;
         box-sizing: border-box;
       }
+      .card-bar {
+        background-color: var(--ddd-theme-default-nittanyNavy);
+        width: 100%;
+        height: 15px;
+      }
+
+
       .card-image {
         width: 100%;
         height: 200px;
@@ -79,9 +86,8 @@ export class DddCard extends DDDSuper(I18NMixin(LitElement)) {
       }
       .card-image img {
         width: 100%;
-        height: 100%;
-        object-fit: cover;
-        border-radius: var(--ddd-radius-lg);
+        height: auto;
+        display: block;
       }
 
       card-title {
@@ -93,6 +99,29 @@ export class DddCard extends DDDSuper(I18NMixin(LitElement)) {
         padding: var(--ddd-spacing-2);
         font-size: var(--ddd-font-size-3);
         color: var(--ddd-theme-primary);
+      }
+      .button-container {
+        text-align: center;
+        margin-top: auto;
+        padding-bottom: var(--ddd-spacing-4);
+      }
+      button {
+        background-color: var(--ddd-theme-default-link);
+        color: var(--ddd-theme-default-white);
+        text-align: center;
+        display: inline-block;
+        font-size: var(--ddd-font-size-4xs);
+        padding: var(--ddd-spacing-4);
+        border-radius: var(--ddd-radius-md);
+        width: 85%;
+        box-sizing: border-box;
+        margin: 0 auto;
+        cursor: pointer;
+        border: none;
+      }
+      button:hover {
+        background-color: var(--ddd-theme-default-nittanyNavy);
+        color: var(--ddd-theme-default-white);
       }
     `];
   }
