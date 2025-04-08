@@ -53,10 +53,14 @@ export class DddCardList extends DDDSuper(I18NMixin(LitElement)) {
         color: var(--ddd-theme-primary);
         background-color: var(--ddd-theme-default-slateMaxLight);
         font-family: var(--ddd-font-navigation);
+        width: 100%;
+        height: 100%;
       }
       .wrapper {
         margin: var(--ddd-spacing-2);
         padding: var(--ddd-spacing-4);
+        width: 100%;
+        height: 100%;
         background-color: var(--ddd-theme-default-slateMaxLight);
       }
 
