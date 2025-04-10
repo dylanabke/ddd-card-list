@@ -49,7 +49,7 @@ export class DddCardList extends DDDSuper(I18NMixin(LitElement)) {
     return [super.styles,
     css`
       :host {
-        display: block;
+        display: inline-flex;
         color: var(--ddd-theme-primary);
         background-color: var(--ddd-theme-default-slateMaxLight);
         font-family: var(--ddd-font-navigation);
