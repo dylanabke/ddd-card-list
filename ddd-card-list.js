@@ -58,7 +58,7 @@ export class DddCardList extends DDDSuper(I18NMixin(LitElement)) {
       }
       .wrapper {
         margin: var(--ddd-spacing-2);
-        padding: var(--ddd-spacing-4);
+        padding: var(--ddd-spacing-2);
         width: 100%;
         height: 100%;
         background-color: var(--ddd-theme-default-slateMaxLight);

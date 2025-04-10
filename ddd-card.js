@@ -53,50 +53,52 @@ export class DddCard extends DDDSuper(I18NMixin(LitElement)) {
       }
       .wrapper {
         margin: var(--ddd-spacing-2);
-        padding: var(--ddd-spacing-4);
+        padding: var(--ddd-spacing-2);
       }
       .card {
-        background-color: var(--ddd-theme-default-white);
+        background-color: var(--ddd-theme-default-red);
         width: 310px;
+        height: 510px;
         border: 3px solid var(--ddd-theme-primary);
         padding: var(--ddd-spacing-0);
         margin: var(--ddd-spacing-2);
         overflow: hidden;
-        border-radius: var(--ddd-radius-lg);
+        border-radius: var(--ddd-radius-md);
         box-shadow: var(--ddd-boxShadow-sm);
         justify-content: space-between;
         display: grid;
         flex-direction: column;
-        justify-content: space-between;
         box-sizing: border-box;
-      }
-      .card-bar {
-        background-color: var(--ddd-theme-default-nittanyNavy);
-        width: 100%;
-        height: 10px;
       }
 
       .card-image {
         width: 100%;
         height: 200px;
         overflow: hidden;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        border-bottom: 12px solid var(--ddd-theme-default-nittanyNavy);
+
       }
       .card-image img {
         width: 100%;
-        height: auto;
+        height: 100%;
         display: block;
+
       }
 
       card-title {
-        padding: var(--ddd-spacing-4);
+        padding: var(--ddd-spacing-2);
         font-size: var(--ddd-font-size-4);
-        color: var(--ddd-theme-primary);
+        color: var(--ddd-theme-default-nittanyNavy);
       }
       card-text {
         padding: var(--ddd-spacing-4);
-        font-size: var(--ddd-font-size-3);
+        font-size: var(--ddd-font-size-1);
         color: var(--ddd-theme-primary);
         margin: var(--ddd-spacing-4) var(--ddd-spacing-4) var(--ddd-spacing-4);
+        text-align: left;
+
       }
       .button-container {
         text-align: center;
@@ -132,7 +134,7 @@ export class DddCard extends DDDSuper(I18NMixin(LitElement)) {
           <div class="card-image">
             <img src="${this.getAttribute('data-image') || 'https://via.placeholder.com/350x200'}" alt="${this.title}" />
           </div>
-          <div class="card-bar"></div> <!-- Bar below the image -->
+
           <div class="card-title">
             <h2>${this.title}</h2>
           </div>
