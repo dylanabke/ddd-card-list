@@ -14,7 +14,6 @@ import "./ddd-card.js";
  * @element ddd-card-list
  */
 export class DddCardList extends DDDSuper(I18NMixin(LitElement)) {
-
   static get tag() {
     return "ddd-card-list";
   }
@@ -46,34 +45,34 @@ export class DddCardList extends DDDSuper(I18NMixin(LitElement)) {
 
   // Lit scoped styles
   static get styles() {
-    return [super.styles,
-    css`
-      :host {
-        display: inline-flex;
-        color: var(--ddd-theme-primary);
-        background-color: var(--ddd-theme-default-slateMaxLight);
-        font-family: var(--ddd-font-navigation);
-        width: 100%;
-        height: 100%;
-      }
-      .wrapper {
-        margin: var(--ddd-spacing-2);
-        padding: var(--ddd-spacing-2);
-        width: 100%;
-        height: 100%;
-        background-color: var(--ddd-theme-default-slateMaxLight);
-      }
-
-    `];
+    return [
+      super.styles,
+      css`
+        :host {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          color: var(--ddd-theme-primary);
+          background-color: var(--ddd-theme-default-slateMaxLight);
+          font-family: var(--ddd-font-navigation);
+          height: 100%;
+        }
+        .wrapper {
+          margin: var(--ddd-spacing-2);
+          padding: var(--ddd-spacing-2);
+          height: 100%;
+          background-color: var(--ddd-theme-default-slateMaxLight);
+        }
+      `,
+    ];
   }
 
   // Lit render the HTML
   render() {
-    return html`
-<div class="wrapper">
-  <h3><span>${this.t.title}:</span> ${this.title}</h3>
-  <slot></slot>
-</div>`;
+    return html` <div class="wrapper">
+      <h3><span>${this.t.title}:</span> ${this.title}</h3>
+      <slot></slot>
+    </div>`;
   }
 
   /**
