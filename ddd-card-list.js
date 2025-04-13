@@ -49,9 +49,8 @@ export class DddCardList extends DDDSuper(I18NMixin(LitElement)) {
       super.styles,
       css`
         :host {
-          display: flex;
+          display: inline-flex;
           flex-direction: row;
-          flex-wrap: wrap;
           color: var(--ddd-theme-primary);
           background-color: var(--ddd-theme-default-slateMaxLight);
           font-family: var(--ddd-font-navigation);
