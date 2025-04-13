@@ -112,7 +112,8 @@ export class DddCard extends DDDSuper(I18NMixin(LitElement)) {
         h2 {
           padding-left: var(--ddd-spacing-4);
           color: var(--ddd-theme-default-nittanyNavy);
-          font-size: var(--ddd-font-size-4);
+          font-size: 24px;
+          margin-top: 4px;
         }
         p {
           font-size: var(--ddd-font-size-1);
