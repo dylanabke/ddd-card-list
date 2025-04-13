@@ -118,8 +118,9 @@ export class DddCard extends DDDSuper(I18NMixin(LitElement)) {
         p {
           font-size: var(--ddd-font-size-1);
           color: var(--ddd-theme-primary);
-          margin: 0px;
+          margin: 0;
           text-align: left;
+          border-top: 0px;
         }
         .card-title {
           margin: 0px;
